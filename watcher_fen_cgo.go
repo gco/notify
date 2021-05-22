@@ -20,19 +20,6 @@ import (
 	"unsafe"
 )
 
-const (
-	fileAccess     = Event(C.FILE_ACCESS)
-	fileModified   = Event(C.FILE_MODIFIED)
-	fileAttrib     = Event(C.FILE_ATTRIB)
-	fileDelete     = Event(C.FILE_DELETE)
-	fileRenameTo   = Event(C.FILE_RENAME_TO)
-	fileRenameFrom = Event(C.FILE_RENAME_FROM)
-	fileTrunc      = Event(C.FILE_TRUNC)
-	fileNoFollow   = Event(C.FILE_NOFOLLOW)
-	unmounted      = Event(C.UNMOUNTED)
-	mountedOver    = Event(C.MOUNTEDOVER)
-)
-
 // PortEvent is a notify's equivalent of port_event_t.
 type PortEvent struct {
 	PortevEvents int         // PortevEvents is an equivalent of portev_events.
